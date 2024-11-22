@@ -15,21 +15,23 @@ def get_computer_choice():
 def determine_winner(player_pick, cpu_pick):
   if player_pick == cpu_pick:
     print()
-    print("No one winsY_Y")
+    print("Sigh...it's a tie (¬ ⤙ ¬ )")
   
   elif (player_pick == "scissors" and cpu_pick == "paper") or \
        (player_pick == "rock" and cpu_pick == "scissors") or \
        (player_pick == "paper" and cpu_pick == "rock"):
     print()
-    print("You Win>+<")
+    print("...Whatever, I guess you win (  •̀ ᴖ •́  ) ")
   
-  else:
+  else: 
     print()
-    print("You LOSEEE:p")
+    print("HAHA YOU LOSEE ( ˃` ⩌ ´˂ )")
 
 
 player_pick = get_player_choice()
 cpu_pick = get_computer_choice()
 print()
-print(f"The Computer chose:{cpu_pick}")
+print(f"I picked {cpu_pick}")
+print()
+print(f"You picked {player_pick}")
 determine_winner(player_pick, cpu_pick)
