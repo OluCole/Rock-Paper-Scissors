@@ -22,6 +22,7 @@ while game == True:
     if player_pick == cpu_pick:
       print()
       print("Sigh...it's a tie (¬ ⤙ ¬ )")
+      print()
       games_played += 1
     
     elif (player_pick == "scissors" and cpu_pick == "paper") or \
@@ -29,6 +30,7 @@ while game == True:
          (player_pick == "paper" and cpu_pick == "rock"):
       print()
       print("...Whatever, I guess you win (  •̀ ᴖ •́  ) ")
+      print()
       # global games_played
       games_played += 1
       games_won += 1
@@ -36,6 +38,7 @@ while game == True:
     else: 
       print()   
       print("HAHA YOU LOSEE ( ˃` ⩌ ´˂ )")
+      print()
       games_played += 1
   
   player_pick = get_player_choice()
@@ -44,7 +47,7 @@ while game == True:
   print(f"I picked {cpu_pick}")
   print()
   print(f"You picked {player_pick}")
-  # determine_winner:(player_pick, cpu_pick)
+  determine_winner(player_pick, cpu_pick, games_played, games_won)
   
 
   answer = input("Play again (y/n)?: ")
@@ -53,5 +56,6 @@ while game == True:
       os.system("clear")
   elif answer == "n":
       runner = False
-      print("Thanks for playing!")
+      print()
+      print("How could you leave...:(")
       break
